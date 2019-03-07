@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace ="com.nexters.project.dao.WeatherDao">
+ 
+ <!-- 날씨  출력 -->
+ 	<select id = "listDao" resultType="com.nexters.project.dto.WeatherDto">
+ 		SELECT * FROM weather where city_id = #{param1} AND month = #{param2}
+ 	</select>
+
+ </mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace ="com.nexters.project.dao.CarrierDao">
+ 
+ <!-- 캐리어  출력 -->
+ 	<select id = "listDao" resultType="com.nexters.project.dto.CarrierDto">
+ 		SELECT * FROM carrier Where cId = #{param1} 
+ 	</select>
+ 
+ <!--  캐리어 등록  -->
+ 	<insert id="writeDao" useGeneratedKeys="true" keyProperty="cId" parameterType="com.nexters.project.dto.CarrierDto">
+ 		INSERT INTO carrier (cName, cCountry, startDate) VALUES (#{cName}, #{cCountry}, #{startDate})
+ 	</insert>
+
+<!-- 캐리어 수정 -->
+	<update id = "updateDao">
+		UPDATE carrier set cName = #{param1}, cCountry = #{param2}, startDate = #{param3} where cId = #{param4} 
+	</update>
+<!--  캐리어 삭제 -->
+	<delete id="deleteDao">
+		DELETE FROM carrier WHERE cId = #{param1}
+	</delete> 
+ </mapper>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace ="com.nexters.project.dao.PackDao">
+ 
+ <!-- 특정 준비물  출력 -->
+ 	<select id = "listDao" resultType="com.nexters.project.dto.PackDto">
+ 		SELECT * FROM package where pId = #{param1}
+ 	</select>
+ 	
+ 	 <!-- 캐리어에 대한 모든 준비물 출력  -->
+ 	<select id = "listAllDao" resultType="com.nexters.project.dto.PackDto">
+ 		SELECT * FROM package where pcId = #{param1} order by ${param2} desc
+ 	</select>
+ 
+ <!-- 준비물 등록  -->
+ 	<insert id="writeDao" useGeneratedKeys="true" keyProperty="pId" parameterType="com.nexters.project.dto.PackDto">
+ 		INSERT INTO package (pcId, pName, pColor, pCheck) VALUES (#{pcId}, #{pName}, #{pColor}, #{pCheck})
+ 	</insert>
+
+<!--  준비물 체크하기 -->
+	<update id="checkDao">
+		UPDATE package set pCheck = #{param2} where pId = #{param1}
+	</update>
+
+<!-- 준비물 수정하기 -->
+	<update id="updateDao" parameterType = "com.nexters.project.dto.PackDto">
+		UPDATE package set pName = #{pName}, pColor = #{pColor} where pId = #{pId}
+	</update>
+		
+<!--  준비물 삭제 -->
+	<delete id="deleteDao">
+		DELETE FROM package WHERE pId = #{param1}
+	</delete> 
+ </mapper>
