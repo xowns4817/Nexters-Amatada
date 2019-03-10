@@ -146,7 +146,7 @@ public class HomeController {
 	}
 	
 	//특정 캐리어에 대한 모든 준비물 출력 (라벨순, 등록순 구분) ?cId=2&sort=1  (sort : 0 등록순, 1 라벨순 )
-	@RequestMapping(method=RequestMethod.GET, value="/pack/all")
+	@RequestMapping(method=RequestMethod.GET, value="/carrier/pack")
 	@ResponseBody
 	public Map<String, Object> PackageList(HttpServletRequest request, Model model) {
 		
@@ -187,7 +187,7 @@ public class HomeController {
 	}
 	
 	//준비물 등록하기 ( 여러개의 추가된 준비들을 어떻게 디비에 넣지? - 쿼리문을 여러개 써줘야 되는건지?)
-	@RequestMapping(method=RequestMethod.POST, value="/pack")
+	@RequestMapping(method=RequestMethod.POST, value="/carrier/pack")
 	@ResponseBody
 	public String PackageInsert(HttpServletRequest request, Model model) {
 		
@@ -208,7 +208,7 @@ public class HomeController {
 	}
 	
 	//준비물 수정하기
-	@RequestMapping(method=RequestMethod.PUT, value="/pack")
+	@RequestMapping(method=RequestMethod.PUT, value="/carrier/pack")
 	@ResponseBody
 	public int PackageUpdate(HttpServletRequest request, Model model) {
 		
@@ -228,7 +228,7 @@ public class HomeController {
 	}
 	
 	//준비물 삭제하기
-	@RequestMapping(method=RequestMethod.DELETE, value="/pack")
+	@RequestMapping(method=RequestMethod.DELETE, value="/carrier/pack")
 	@ResponseBody
 	public String PackageDelete(HttpServletRequest request, Model model) {
 		
@@ -239,7 +239,7 @@ public class HomeController {
 	}
 	
 	//준비믈 체크하기 (체크하면 아래로 내려감 -> pCheck 변수만 set 해줌 ) -> 수정!
-	@RequestMapping(method=RequestMethod.PUT, value="/pack/check")
+	@RequestMapping(method=RequestMethod.PUT, value="/carrier/pack/check")
 	@ResponseBody
 	 public PackDto PackageCheck(HttpServletRequest request, Model model) {
 		
