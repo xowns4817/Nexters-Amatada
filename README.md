@@ -1,36 +1,37 @@
+
 # Nexters-Amatda
 
 ##디비 테이블 명세서
 
->###캐리어 테이블
+>### 1. 캐리어 테이블
 >>#### cId (캐리어 아이디) - Primary Key
 >>#### cName (캐리어 이름)
 >>#### cCountry (여행국가 이름)
 >>#### startDate (여행 시작날짜)
 >>#### cCreated (캐리어 생성 날짜)
 
->### 1. 옵션 테이블
+>### 2. 옵션 테이블
 >>#### oId (옵션 아이디) - Primary Key
 >>#### ocId (캐리어 아이디) - Foreign Key
 >>#### oCategory (카테고리 종류)
 
->### 2. 준비물 테이블
+>### 3. 준비물 테이블
 >>#### pId (준비물 아이디) - Primary Key
 >>#### pcId (캐리어 아이디) - Foreign Key
 >>#### pColor (준비물 라벨 색상)
 >>#### pCheck (준비물을 챙겼는지 확인하는 변수)
 >>#### pCreated (준비물 생성시간)
 
->### 3. 추천 준비물 테이블
+>### 4. 추천 준비물 테이블
 >>#### rId (추천 준비물 아이디) - Primary Key
 >>#### rCategory (추천 준비물 옵션) - Foreign Key
 >>#### rName (추천 준비물 이름)
 
->### 4. 도시 테이블
+>### 5. 도시 테이블
 >>#### city_id (도시 아이디) - Primary Key
 >>#### city_name (도시 이름)
 
->#### 5. 날씨 테이블
+>#### 6. 날씨 테이블
 >>#### weather_id (날씨 아이디) - Primary Key
 >>#### temperature_avg (평균 온도)
 >>#### weather_status (날씨 상태)
