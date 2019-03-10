@@ -1,6 +1,7 @@
 
 # Nexters-Amatda
 
+## 아맞다 : https://medium.com/amatda
 ## 아맞다 IOS : https://github.com/Nexters/Amatda-iOS
 ## 아맞다 Android : https://github.com/sojeongw/amatda-android
 
