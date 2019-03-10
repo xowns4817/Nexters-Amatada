@@ -1,7 +1,10 @@
 
 # Nexters-Amatda
 
-##디비 테이블 명세서
+# 아맞다 IOS : https://github.com/Nexters/Amatda-iOS
+# 아맞다 Android : https://github.com/sojeongw/amatda-android
+
+## 디비 테이블 명세서
 
 >### 1. 캐리어 테이블
 >>#### cId (캐리어 아이디) - Primary Key
