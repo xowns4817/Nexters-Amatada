@@ -3,7 +3,7 @@
 
 ## 아맞다 : https://medium.com/amatda
 ## 아맞다 IOS : https://github.com/Nexters/Amatda-iOS
-## 아맞다 Android : https://github.com/sojeongw/amatda-android
+## 아맞다 Android : https://github.com/conquerex/amatda-android
 
 ## 디비 테이블 명세서
 
