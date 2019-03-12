@@ -58,7 +58,7 @@
 >>#### http metho : PUT
 >>#### url -> /carrier
 >>#### body에 들어갈 데이터 : cId(int), cName(varchar), cCountry(varchar), startDate(datetime)
->>#### return 값 : 수정된 캐리어 객체의 컬럼값
+>>#### return 값 : 수정된 캐리어 객체의 cId 값 (캐리어 아이디)
 
 >### 4. 캐리어 삭제하기
 >>#### http method : DELETE
