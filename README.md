@@ -77,6 +77,7 @@
 >### 7. 준비물 수정하기
 >>#### http method : PUT
 >>#### url -> /carrier/pack
+>>### body에 넣을 데이터 : pId, pName, pColor
 >>#### return 값  : pId(준비물 아이디)
 
 >### 8. 준비물 삭제하기
